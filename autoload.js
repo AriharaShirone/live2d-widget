@@ -1,5 +1,7 @@
-// 注意：live2d_path 参数应使用绝对路径
-const live2d_path = "https://s-sh-2722-shirone.oss.dogecdn.com/live2d-iro/";
+// 注意：live2d_path 参数应使用绝对路径，记得修改哦
+const live2d_path = "https://s-sh-2722-shirone.oss.dogecdn.com/live2d_load_own/";
+const tips_path = "https://s-sh-2722-shirone.oss.dogecdn.com/live2d_load_own/";
+//const live2d_path = "";
 //const live2d_path = "/live2d-widget/";
 
 // 封装异步加载资源的方法
@@ -25,23 +27,17 @@ function loadExternalResource(url, type) {
 }
 
 // 加载 waifu.css live2d.min.js waifu-tips.js
-if (screen.width >= 768) {
 	Promise.all([
-		loadExternalResource(live2d_path + "waifu.css", "css"),
+		loadExternalResource(live2d_path + "waifu.min.css", "css"),
 		loadExternalResource(live2d_path + "live2d.min.js", "js"),
 		loadExternalResource(live2d_path + "waifu-tips.js", "js")
 	]).then(() => {
 		initWidget({
-			waifuPath: live2d_path + "waifu-tips.json",
-			//apiPath: "https://live2d.fghrsh.net/api/",
+			waifuPath: tips_path + "waifu-tips.min.json",
+			apiPath: "https://s-sh-2722-shirone.oss.dogecdn.com/live2d_api/",
 			cdnPath: "https://s-sh-2722-shirone.oss.dogecdn.com/live2d_api/"
 		});
 	});
-}
-// initWidget 第一个参数为 waifu-tips.json 的路径，第二个参数为 API 地址
-// API 后端可自行搭建，参考 https://github.com/fghrsh/live2d_api
-// 初始化看板娘会自动加载指定目录下的 waifu-tips.json
-
 console.log(`
   く__,.ヘヽ.        /  ,ー､ 〉
            ＼ ', !-─‐-i  /  /´
