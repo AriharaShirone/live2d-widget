@@ -34,7 +34,7 @@ function loadExternalResource(url, type) {
 	]).then(() => {
 		initWidget({
 			waifuPath: tips_path + "waifu-tips.min.json",
-			apiPath: "https://s-sh-2722-shirone.oss.dogecdn.com/live2d_api/",
+			//apiPath: "https://s-sh-2722-shirone.oss.dogecdn.com/live2d_api/",
 			cdnPath: "https://s-sh-2722-shirone.oss.dogecdn.com/live2d_api/"
 		});
 	});
