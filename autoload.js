@@ -1,6 +1,6 @@
-// 注意：live2d_path 参数应使用绝对路径
-const live2d_path = "https://s-sh-2722-shirone.oss.dogecdn.com/live2d_load/";
-const tips_path = "https://s-sh-2722-shirone.oss.dogecdn.com/live2d_load/";
+// 注意：live2d_path 参数应使用绝对路径，记得修改哦
+const live2d_path = "https://s-sh-2722-shirone.oss.dogecdn.com/live2d2/";
+const tips_path = "https://s-sh-2722-shirone.oss.dogecdn.com/live2d2/";
 //const live2d_path = "";
 //const live2d_path = "/live2d-widget/";
 
@@ -27,17 +27,17 @@ function loadExternalResource(url, type) {
 }
 
 // 加载 waifu.css live2d.min.js waifu-tips.js
-	Promise.all([
-		loadExternalResource(live2d_path + "waifu.min.css", "css"),
-		loadExternalResource(live2d_path + "live2d.min.js", "js"),
-		loadExternalResource(live2d_path + "waifu-tips.js", "js")
-	]).then(() => {
-		initWidget({
-			waifuPath: tips_path + "waifu-tips.min.json",
-			apiPath: "https://s-sh-2722-shirone.oss.dogecdn.com/live2d_api/",
-			cdnPath: "https://s-sh-2722-shirone.oss.dogecdn.com/live2d_api/"
-		});
+Promise.all([
+	loadExternalResource(live2d_path + "waifu.min.css", "css"),
+	loadExternalResource(live2d_path + "live2d.min.js", "js"),
+	loadExternalResource(live2d_path + "waifu-tips.js", "js")
+]).then(() => {
+	initWidget({
+		waifuPath: tips_path + "waifu-tips.min.json",
+		apiPath: "https://api.amogu.cn/api/live2d/",
+		cdnPath: "https://s-sh-2722-shirone.oss.dogecdn.com/live2d_api/"
 	});
+});
 console.log(`
   く__,.ヘヽ.        /  ,ー､ 〉
            ＼ ', !-─‐-i  /  /´
