@@ -1,6 +1,6 @@
-// 注意：live2d_path 参数应使用绝对路径，记得修改哦
-const live2d_path = "https://s-sh-2722-shirone.oss.dogecdn.com/live2d_load_own/";
-const tips_path = "https://s-sh-2722-shirone.oss.dogecdn.com/live2d_load_own/";
+// 注意：live2d_path 参数应使用绝对路径
+const live2d_path = "https://s-sh-2722-shirone.oss.dogecdn.com/live2d_load/";
+const tips_path = "https://s-sh-2722-shirone.oss.dogecdn.com/live2d_load/";
 //const live2d_path = "";
 //const live2d_path = "/live2d-widget/";
 
@@ -35,7 +35,7 @@ function loadExternalResource(url, type) {
 		initWidget({
 			waifuPath: tips_path + "waifu-tips.min.json",
 			apiPath: "https://s-sh-2722-shirone.oss.dogecdn.com/live2d_api/",
-			//cdnPath: "https://s-sh-2722-shirone.oss.dogecdn.com/live2d_api/"
+			cdnPath: "https://s-sh-2722-shirone.oss.dogecdn.com/live2d_api/"
 		});
 	});
 console.log(`
